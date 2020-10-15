@@ -1,0 +1,99 @@
+.menu [type="checkbox"],
+.menu label.first-floor__sub {
+    display: none;
+}
+
+.menu label.menu__check {
+    float: right;
+    display: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+@media all and (max-width: 1100px) {
+    .menu {
+        overflow-y: auto;
+        overflow-x: hidden;
+        max-height: 100vh;
+    }
+
+    .menu .first-floor a {
+        width: 100%;
+    }
+
+    .hr {
+        display: none;
+    }
+
+    .first-floor {
+        display: none;
+        margin-top: 50px;
+    }
+
+    .first-floor  li{
+        position: relative;
+    }
+
+    .second-floor {
+        width: auto;
+        padding: 0 0 0 5px;
+    }
+
+    .third-floor {
+        display: none;
+    }
+
+    .third-floor li{
+        padding-left: 10px;
+    }
+
+
+    .menu label.menu__check {
+        display: block;
+    }
+
+    .fas {
+        color: orange;
+    }
+
+    input.menu__check:checked ~ .first-floor,
+    input.first-floor__sub:checked ~ .second-floor,
+    input.first-floor__sub:checked ~ .third-floor{
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        border: none;
+    }
+
+    .menu label.first-floor__sub {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 10px;
+        height: 10px;
+        cursor: pointer;
+        display: block;
+    }
+
+    .menu label.first-floor__sub .fa:before{
+        content: "\f0d7";
+        color: #454547;
+        padding: 5px;
+        border-left: 1px solid gray;
+    }
+
+    .menu label.first-floor__sub .fa{
+        position: absolute;
+        top: 15px;
+        right: 50px;
+        color: black;
+    }
+
+    .menu input.first-floor__sub:checked ~ label.first-floor__sub .fa:before{
+        content: "\f0d8";
+        color: #454547;
+    }
+
+}
