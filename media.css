@@ -18,6 +18,10 @@
         max-height: 100vh;
     }
 
+    .body .container{
+        width: 96vw;
+    }
+
     .menu .first-floor a {
         width: 100%;
     }

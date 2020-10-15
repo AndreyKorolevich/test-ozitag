@@ -14,8 +14,6 @@ subs.forEach(e => e.addEventListener('click', (event) => {
     const sub = document.querySelectorAll(`.${parent} > li > .first-floor__sub`);
     sub.forEach(e => {
         const targetInput = event.target.closest('li').firstElementChild;
-
-        console.log(e.id, targetInput.id, e.checked)
         if (e.id !== targetInput.id && e.id.trim() !== '' && e.checked) {
             e.checked = !e.checked;
             const event = new Event('change');
